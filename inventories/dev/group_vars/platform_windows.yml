@@ -1,0 +1,16 @@
+---
+ansible_connection: winrm 
+ansible_user: vagrant 
+ansible_password: vagrant
+ansible_winrm_server_cert_validation: ignore
+# server_name: agent
+# server_forwarding_name: '{{ server_name }}-server'
+server_name: development-machine
+server_forwarding_name: 'agent-server'
+server_forwarding_port: 8080
+server_forwarding_address: 10.211.55.2
+nginx_deployment_dir: 'C:\Tools\nginx-1.21.6'
+secret_ca_passphrase: change_me
+path_to: '{{ server_forwarding_name }}\conf\certs'
+optional_features:
+  - 'wsl install': true

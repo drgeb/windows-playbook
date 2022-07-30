@@ -1,7 +1,7 @@
 ---
 configure_explorer: true
 configure_hostname: false
-custom_hostname: windows-ansible
+custom_hostname: dev-connectauth
 configure_start_menu: true
 configure_taskbar: true
 disable_mouse_acceleration: true
@@ -25,28 +25,17 @@ update_categories:
   # - Updates
   # - Upgrades
 
-change_power_plan: true
+change_power_plan: false
 power_plan: "high performance"
 
 choco_installed_packages:
   - 7zip
-  - Firefox
-  - adobereader
-  - auto-dark-mode
-  - awscli
-  - git
-  - golang
-  - jre8
-  - kubernetes-cli
-  - microsoft-windows-terminal
-  - powertoys
-  - python3
-  - sharex
-  - telegram
-  - terraform
-  - vlc
-  - vscode
-  - zoom
+  # - Firefox
+  # - auto-dark-mode
+  # - git
+  # - microsoft-windows-terminal
+  # - powertoys
+  # - vscode
 
 install_fonts: true
 installed_nerdfonts:
@@ -56,7 +45,7 @@ installed_nerdfonts:
 # List of features: "Get-WindowsOptionalFeature -Online"
 install_windows_features: false
 windows_features:
-  Microsoft-Hyper-V: true
+  Microsoft-Hyper-V: false
 
 # List of valid distributions that can be installed:
 # wsl-alpine
@@ -69,7 +58,7 @@ windows_features:
 # wsl-ubuntu-1604
 # wsl-ubuntu-1804
 # wsl-ubuntu-2004
-install_wsl2: true
+install_wsl2: false
 wsl2_distribution: wsl-ubuntu-2004
 
 remove_bloatware: true
@@ -79,13 +68,13 @@ bloatware:
   - Microsoft.GamingApp
   - Microsoft.GetHelp
   - Microsoft.Getstarted
-  # - Microsoft.Messaging
+  - Microsoft.Messaging
   - Microsoft.Microsoft3DViewer
   - Microsoft.MicrosoftOfficeHub
   - Microsoft.MicrosoftSolitaireCollection
   - Microsoft.MicrosoftStickyNotes
   - Microsoft.MixedReality.Portal
-  # - Microsoft.MSPaint
+  - Microsoft.MSPaint
   - Microsoft.Office.OneNote
   - Microsoft.OneConnect
   - Microsoft.People
@@ -96,7 +85,7 @@ bloatware:
   - Microsoft.Todos
   - Microsoft.Windows.Photos
   - Microsoft.WindowsAlarms
-  # - Microsoft.WindowsCalculator
+  - Microsoft.WindowsCalculator
   - Microsoft.Wallet
   - Microsoft.WindowsCamera
   # - microsoft.windowscommunicationsapps
@@ -108,7 +97,7 @@ bloatware:
   - Microsoft.XboxApp
   - Microsoft.XboxGameOverlay
   - Microsoft.XboxSpeechToTextOverlay
-  # - Microsoft.YourPhone
+  - Microsoft.YourPhone
   - Microsoft.ZuneMusic
   - Microsoft.ZuneVideo
   - MicrosoftTeams
@@ -116,4 +105,3 @@ bloatware:
 defrag_volumes: true
 include_volumes:
   - C
-  - D
